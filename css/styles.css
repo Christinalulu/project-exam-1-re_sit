@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+   --head-color: #FCB676;
+   --action-color: #ea903c;
+   --card-color: #F9D2AE;
+   --delete-color: #F94C4C;
+}
+
+/* Mobile */
+body{
+   font-family: Montserrat, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing:content-box
+
+}
+
+/* header */
+.header-container{
+   background-color: var(--head-color);
+   z-index: 9999;
+   margin: 28px 18px 0 18px;
+   position: fixed;
+   width: calc(100% - 45px);
+ 
+}
+.icon-menu{
+   display: flex;
+   align-items: center;
+}
+
+.logo-container {
+   display: flex;
+   justify-content: space-evenly;
+   color: #fff;
+   
+}
+.logo-container_text{
+   font-weight: 300;
+   font-size: medium;
+   text-transform: uppercase;
+  
+}
+.my-recepies_icon{
+   display: flex;
+   align-items: center;
+}
+
+/* nav bar mobile */
+.mobile_menu{
+   background-color: var(--head-color);
+   color: #fff;
+   margin: 28px 18px;
+   width: 220px;
+   border-radius: 5px;
+   position: fixed;
+   top: 68px;
+   transform: translateX(-250px);
+   transition: 0.5s;
+   overflow: hidden;
+   z-index: 1000;
+}
+.showmenu{
+   transform: translateX(0px);
+}
+.all-items{
+   display: flex;
+   flex-direction: column;
+  
+}
+.item a{
+   text-decoration: none;
+   color: #fff;
+   list-style: none;
+   display: flex;
+   margin: 20px;
+   text-transform: capitalize;
+   overflow: hidden;
+}
+.item a :hover{
+   color: #f77700;
+}
+.item  li{
+   margin-left: 16px;
+}
+
+/* Mobile hero banner start */
+
+.carousel{
+  position: relative;
+  z-index: -9999;
+  outline: 2px solid black;
+  height: 800px;
+  width: 800px;
+}
+.carousel .slides{
+   position: absolute;
+   width: 100%;
+   background-repeat: no-repeat;
+   height: 800px;
+   background-position: center;
+   /* outline: 2px solid black; */
+   width: 90%;
+}
+
+.slide_text{
+   position: absolute;
+   top: 0;
+   left: 0;
+   max-width: 60%;
+   z-index: 888;
+}
+ .slide-1{
+
+   background-image: url("../assent/background-image/mobile-background1.jpg");
+ }
+  .slide-2{
+   /* background-image: url("../assent/background-image/mobile-background2.jpg"); */
+ }
+  .slide-3{
+   /* background-image: url("../assent/background-image/mobile-background3.jpg"); */
+ }
+
+
+
+
+
+/* Mobile hero banner end */
+
+
+
+.desktop-menu{
+   display: none;
+}
+
+/* Tablet  768 */
+@media  screen and (min-width:600px) {
+   .slide-1{
+      /* background-image: url("../assent/background-image/desktop-background1.jpg"); */
+    }
+     .slide-2{
+      /* background-image: url("../assent/background-image/desktop-background2.jpg"); */
+    }
+     .slide-3{
+      /* background-image: url("../assent/background-image/desktop-background3.jpg"); */
+    }
+}
+
+
+/* Desktop  1024*/
+@media screen and (min-width:1024px) {
+   /* hidden menu */
+   .mobile_menu{
+      display: none;
+   }
+   .icon-menu{
+      display: none;
+   }
+   .my-recepies_icon{
+      display: none;
+   }
+   .desktop-menu{
+      display: flex;
+   }
+   .desktop-menu-items{
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      background-color: var(--head-color);
+      top: 52px;
+      width: calc(100% - 85px);
+      justify-content: center;
+      margin-left: 18px;
+   }
+
+}
+
